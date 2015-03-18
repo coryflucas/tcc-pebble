@@ -1,0 +1,46 @@
+<html>
+<body>
+  <div id="error"></div>
+  <div class="input-group">
+    <input id="username" type="text" />
+  </div>
+  <div class="input-group">
+    <input id="password" type="password" />
+  </div>
+  <div class="input-group">
+    <button id="saveButton">Save</button>
+  </div>
+
+
+  <script>
+    var getValue = function(id) {
+      return document.getElementById(id).value;
+    };
+
+    var setError = function(error) {
+      document.getElementById('error').textContent = error;
+    };
+
+    var submitConfig = function() {
+      setError('');
+
+      var username = getValue('username');
+      if(!username)
+        setError('Username is required');
+
+      var password = getValue('password');
+      if(!password)
+        setError('Password is required');
+
+      var config = {
+        Username: username,
+        Password: password
+      };
+
+      location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(config));
+    };
+
+    document.getElementById('saveButton').addEventListener('click', submitConfig);
+  </script>
+</body>
+</html>

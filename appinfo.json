@@ -1,0 +1,29 @@
+{
+  "appKeys": {
+    "ACTION": 0,
+    "CURRENT_TEMP": 20,
+    "COOL_SETPOINT": 21,
+    "HEAT_SETPOINT": 22
+  },
+  "capabilities": [
+    "configurable"
+  ],
+  "companyName": "Cory Lucas",
+  "longName": "TCC Pebble",
+  "projectType": "native",
+  "resources": {
+    "media": []
+  },
+  "sdkVersion": "3",
+  "shortName": "TCC Pebble",
+  "uuid": "4bdb58c1-d3f7-48e2-9cc5-1ffd44340fd2",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ]
+}
